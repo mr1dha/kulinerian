@@ -1,3 +1,70 @@
-/*body{
-	background-color: lightblue;
-}*/
+/*JUMBOTRON STYLE IS BELOW HERE!*/
+
+.jumbotron{
+	/*background-image: url(../img/bg1.png);*/
+	background-color: transparent;
+	background-size: cover;
+	height: 700px;
+	/*border-bottom: 10px solid #ffc107;*/
+	text-align: center;
+}
+
+.jumbotron .display-4{
+	color: white;
+	margin-top: 125px;
+}
+
+.jumbotron .lead{
+	color: white;
+}
+
+.jumbotron .web-title{
+	font-weight: bold;
+	font-size: 75px;
+	color: white;
+	line-height: 50px;
+}
+
+.jumbotron hr{
+	border-color: #ffc107;
+	width: 7pc;
+	border-width: 3px;
+}
+
+.jumbotron .btn{
+	border: none;
+	border-radius: 25px;
+	padding: 8px 60px;
+	color: white;
+	font-weight: bold;
+}
+
+.jumbotron .search-bar{
+	width: 600px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	border-radius: 25px;
+	margin: auto;
+
+}
+
+/*IMAGE SLIDE STYLE IS BELOW HERE!*/
+.carousel-item{
+	height: 635px;
+	/*border-bottom: 10px solid #ffc107;*/
+}
+
+.row-slide{
+	position: absolute;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+}
+
+
+
+
+
+
