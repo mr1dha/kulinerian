@@ -31,6 +31,9 @@
 	.navbar ul.navbar-nav{
 		background-color: #ffc107;
 	}
+	.embed-responsive{
+		height: 200px;
+	}
 }
 /*JUMBOTRON STYLE IS BELOW HERE!*/
 
@@ -134,4 +137,35 @@ h4.popular-sign{
 #search-container .card-img{
 	height: 200px;
 	object-fit: cover;
+}
+
+
+/*STYLE KULINER PAGE*/
+#kuliner-container{
+	min-height: 81.5vh;
+	margin-top: 60px;
+}
+
+.poin-rincian{
+	font-weight: bold;
+	width: 50%;
+	padding: 4px;
+}
+
+.garis-pemisah{
+	border-color: #ffc107;
+	width: 100%;
+	border-width:3px;
+	margin-top: 0px;
+}
+
+#kuliner-container h5{
+	background-color: #ffc107;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	font-weight: bold;
+
 }

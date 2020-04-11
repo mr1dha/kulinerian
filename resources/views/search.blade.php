@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container" id="search-container">
-	<h1>Hasil pencarian untuk 'Sate matang'</h1>
+	<h1><i class="fas fa-search mr-1"></i>Hasil pencarian untuk 'Sate matang'</h1>
 	<hr class="mb-4">
 
 	<div class="card shadow">
@@ -22,16 +22,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- <h1>Hasil pencarian untuk 'Sate matang'</h1>
-	<hr class="mb-4">
-	<div class="media p-2 shadow">
-		<img src="{{asset('img/item1.jpg')}}" alt="" class="mr-3">
-		<div class="media-body">
-			<h5>Sate Matang Bireuen</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellat at dolorem officia corrupti culpa, voluptas assumenda optio voluptates doloremque.</p>
-		</div>
-		<a href="{{url('/kuliner')}}" class="btn btn-warning">Lihat kuliner ini</a>
-	</div> -->
 </div>
 
 @endsection

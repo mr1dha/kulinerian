@@ -16,9 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/lay', function () {
-    return view('layout/layout');
-});
+
 Route::get('/search', function () {
     return view('search');
+});
+
+Route::get('/kuliner', function () {
+    return view('kuliner');
+});
+
+Route::get('/kategori', function () {
+    return view('kategori');
 });

@@ -26,7 +26,7 @@
 	          KATEGORI 1
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#">Action</a>
+	          <a class="dropdown-item" href="{{url('/kategori')}}">Action</a>
 	          <a class="dropdown-item" href="#">Another action</a>
 	          <a class="dropdown-item" href="#">Something else here</a>
 	        </div>
@@ -62,6 +62,10 @@
 	        </div>
 	      </li>
 	    </ul>
+	    <form class="form-inline my-2 my-lg-0 ml-3">
+	      <input class="form-control mr-sm-2" type="search" placeholder="pencarian" aria-label="Search">
+	      <button class="btn btn-dark my-2 my-sm-0" type="submit">Cari</button>
+	    </form>
 	  </div>
     </div>
   </nav>
