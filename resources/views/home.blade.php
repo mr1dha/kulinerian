@@ -18,7 +18,7 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav ml-auto">
-	       <li class="nav-item dropdown ">
+	       <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          KATEGORI 1
 	        </a>
@@ -64,29 +64,12 @@
 	</nav>
 
 	<!-- JUMBOTRON -->
-	<div class="row row-slide">
-		<div class="col-12">
-			<div class="jumbotron bg-transparent">
-		<div class="container">
+	<div class="welcome">
 		  <h1 class="display-4">TEMUKAN SELERA KULINERMU DI <br></h1>
 		  <hr class="my-4">
 		  <span class="web-title">KULINERIAN</span>
-		 <!-- <p class="lead">Website portal kuliner Aceh terlengkap</p> -->
-		  
-		  <form action="" method="POST">
-		  	<div class="form-group mt-5">
-				<div class="input-group">
-					<!-- <div class="input-group-prepend">
-						<div class="input-group-text"><i class="fas fa-unlock-alt"></i></div>
-					</div> -->
-					<input type="text" class="search-bar" name="cari" placeholder="Mau cari kuliner apa?">
-				</div>
-			</div>
+			<input type="text" class="search-bar" name="cari" placeholder="Mau cari kuliner apa?">
 		  	<a class="btn btn-warning btn-lg" href="#" role="button">CARI</a>
-		  </form>
-		</div>
-	</div>
-		</div>
 	</div>
 
 	<!-- SLIDE IMAGE -->
@@ -98,17 +81,25 @@
 	  </ol>
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
-	      <img src="{{asset('img/bg1.png')}}" class="d-block w-100" alt="...">
-	      <div class="carousel-caption d-none d-md-block">
-	        <h5>First slide label</h5>
-	        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+	      <img src="{{asset('img/bg1.png')}}" class="d-block" alt="...">
+	      <div class="carousel-caption">
+	        <h5>Kuliner di Aceh</h5>
+	        <p>Kurang lebih terdapat XXX jenis kuliner di Aceh</p>
 	      </div>
 	    </div>
 	    <div class="carousel-item">
-	      <img src="{{asset('img/bg2.png')}}" class="d-block w-100" alt="...">
+	      <img src="{{asset('img/bg2.png')}}" class="d-block" alt="...">
+	      	<div class="carousel-caption">
+	      	<h5>Sate Matang</h5>
+	        <p>Ini adalah deskripsi singkat sate matang</p>
+	    	</div>
 	    </div>
 	    <div class="carousel-item">
-	      <img src="{{asset('img/bg1.png')}}" class="d-block w-100" alt="...">
+	      <img src="{{asset('img/bg3.png')}}" class="d-block" alt="...">
+	      	<div class="carousel-caption">
+	      	<h5>Soto Aceh</h5>
+	        <p>Ini adalah deskripsi singkat soto Aceh</p>
+	    	</div>
 	    </div>
 	  </div>
 	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -120,6 +111,72 @@
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
+
+	<!-- DAFTAR KULINER POPULER -->
+	<h4 class="text-center font-weight-bold text-warning py-3 mb-3 bg-dark">
+    <i class="fas fa-list mr-1" style="color: #ffc107; font-size: 21px;"></i> KULINER POPULER</h4>
+
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-3 col-sm-6 mb-3">
+		        <div class="card border-0 shadow">
+		          <img src="{{asset('img/bg2.png')}}" alt="" class="card-img-top">
+		          <div class="card-body">
+		           <h5 class="card-title m-1">Sate Matang</h5>
+		            <p class="m-1 mb-2">
+		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
+		            </p>
+		            <button class="btn btn-secondary">Menu Utama</button>
+		            <button class="btn btn-warning text-white">Lihat</button>
+		          </div>
+		        </div>
+		    </div>
+		    <div class="col-md-3 col-sm-6 mb-3">
+		        <div class="card border-0 shadow">
+		          <img src="{{asset('img/bg3.png')}}" alt="" class="card-img-top">
+		          <div class="card-body">
+		           <h5 class="card-title m-1">Soto Aceh</h5>
+		            <p class="m-1 mb-2">
+		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
+		            </p>
+		            <button class="btn btn-secondary">Menu Utama</button>
+		            <button class="btn btn-warning text-white">Lihat</button>
+		          </div>
+		        </div>
+		    </div>
+		   <div class="col-md-3 col-sm-6 mb-3">
+		        <div class="card border-0 shadow">
+		          <img src="{{asset('img/bg2.png')}}" alt="" class="card-img-top">
+		          <div class="card-body">
+		           <h5 class="card-title m-1">Sate Matang</h5>
+		            <p class="m-1 mb-2">
+		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
+		            </p>
+		            <button class="btn btn-secondary">Menu Utama</button>
+		            <button class="btn btn-warning text-white">Lihat</button>
+		          </div>
+		        </div>
+		    </div>
+		    <div class="col-md-3 col-sm-6 mb-3">
+		        <div class="card border-0 shadow">
+		          <img src="{{asset('img/bg3.png')}}" alt="" class="card-img-top">
+		          <div class="card-body">
+		           <h5 class="card-title m-1">Soto Aceh</h5>
+		            <p class="m-1 mb-2">
+		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
+		            </p>
+		            <button class="btn btn-secondary">Menu Utama</button>
+		            <button class="btn btn-warning text-white">Lihat</button>
+		          </div>
+		        </div>
+		    </div>
+    	</div>
+    </div>
+      <div class="col-sm-12 mb-4 text-right">
+        <button class="btn btn-warning mt-3 font-weight-bold">Selengkapnya</button>
+      </div>
+    </div>
+  </div>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
