@@ -69,7 +69,7 @@
 		  <hr class="my-4">
 		  <span class="web-title">KULINERIAN</span>
 			<input type="text" class="search-bar" name="cari" placeholder="Mau cari kuliner apa?">
-		  	<a class="btn btn-warning btn-lg" href="#" role="button">CARI</a>
+		  	<a class="btn btn-warning btn-lg" href="{{url('/search')}}" role="button">CARI</a>
 	</div>
 
 	<!-- SLIDE IMAGE -->
@@ -120,7 +120,7 @@
     	<div class="row">
     		<div class="col-md-3 col-sm-6 mb-3">
 		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/bg2.png')}}" alt="" class="card-img-top">
+		          <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img-top">
 		          <div class="card-body">
 		           <h5 class="card-title m-1">Sate Matang</h5>
 		            <p class="m-1 mb-2">
@@ -133,7 +133,7 @@
 		    </div>
 		    <div class="col-md-3 col-sm-6 mb-3">
 		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/bg3.png')}}" alt="" class="card-img-top">
+		          <img src="{{asset('img/item2.jpg')}}" alt="" class="card-img-top">
 		          <div class="card-body">
 		           <h5 class="card-title m-1">Soto Aceh</h5>
 		            <p class="m-1 mb-2">
@@ -146,7 +146,7 @@
 		    </div>
 		   <div class="col-md-3 col-sm-6 mb-3">
 		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/bg2.png')}}" alt="" class="card-img-top">
+		          <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img-top">
 		          <div class="card-body">
 		           <h5 class="card-title m-1">Sate Matang</h5>
 		            <p class="m-1 mb-2">
@@ -159,7 +159,7 @@
 		    </div>
 		    <div class="col-md-3 col-sm-6 mb-3">
 		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/bg3.png')}}" alt="" class="card-img-top">
+		          <img src="{{asset('img/item2.jpg')}}" alt="" class="card-img-top">
 		          <div class="card-body">
 		           <h5 class="card-title m-1">Soto Aceh</h5>
 		            <p class="m-1 mb-2">

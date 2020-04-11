@@ -31,9 +31,6 @@
 	.navbar ul.navbar-nav{
 		background-color: #ffc107;
 	}
-	.navbar .nav-item{
-		
-	}
 }
 /*JUMBOTRON STYLE IS BELOW HERE!*/
 
@@ -111,3 +108,30 @@ h4.popular-sign{
 	object-position: center;
 }
 
+/*FOOTER*/
+
+.footer{
+	margin-top: 10px;
+	text-align: center;
+	color: white;
+	padding: 15px;
+	border-top: 3px solid #ffc107;
+}
+
+
+/*STYLE SEARCH PAGE*/
+#search-container{
+	min-height: 81.5vh;
+	margin-top: 60px;
+}
+
+#search-container hr{
+	border-color: #ffc107;
+	width: 100%;
+	border-width: 3px;
+}
+
+#search-container .card-img{
+	height: 200px;
+	object-fit: cover;
+}
