@@ -29,6 +29,15 @@
 	}
 	
 	.navbar ul.navbar-nav{
+		/*background-color: #ffc107;*/
+	}
+	.navbar .dropdown-menu{
+		background-color: transparent;
+	}
+	.navbar .dropdown-item{
+		color: white;
+	}
+	.navbar .dropdown-item:hover{
 		background-color: #ffc107;
 	}
 	.embed-responsive{
@@ -168,4 +177,16 @@ h4.popular-sign{
 	border-bottom-right-radius: 25px;
 	font-weight: bold;
 
+}
+
+.nav-layout{
+	border-bottom: 3px solid #ffc107;
+}
+.navbar .dropdown-item:hover{
+	background-color: #ffc107;
+}
+.navbar-home.scrolled {
+  background-color: #343a40 !important;
+  border-bottom: 3px solid #ffc107;
+  transition: background-color border-bottom 200ms linear;
 }

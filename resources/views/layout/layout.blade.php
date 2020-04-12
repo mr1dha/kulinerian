@@ -10,11 +10,11 @@
 </head>
 <body>
 	<!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow text-warning fixed-top nav-layout">
     <div class="container">
       <a class="navbar-brand" href="{{url('/')}}">
-        <i class="fa-1x fas fa-cloud-meatball"></i>
-        <span class="font-weight-bold">KULINERIAN</span>
+        <i class="fa-1x fas fa-cloud-meatball text-warning"></i>
+        <span class="font-weight-bold text-warning">KULINERIAN</span>
       </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
