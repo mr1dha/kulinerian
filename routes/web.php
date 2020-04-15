@@ -13,18 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'KulinerController@index');
 
-Route::get('/search', function () {
-    return view('search');
-});
+Route::get('/search', 'KulinerController@search');
 
-Route::get('/kuliner', function () {
-    return view('kuliner');
-});
+Route::get('/kuliner', 'KulinerController@kuliner');
 
-Route::get('/kategori', function () {
-    return view('kategori');
-});
+Route::get('/kuliner/tambah', 'KulinerController@create');
+
+Route::get('/kuliner/{kuliner}', 'KulinerController@show');
+
+Route::get('/kategori', 'KulinerController@kategori');

@@ -46,6 +46,11 @@
 }
 /*JUMBOTRON STYLE IS BELOW HERE!*/
 
+.card-body p#deskripsi-kuliner{
+	font-size: 13px;
+	align-items: justify;
+}
+
 .welcome .display-4{
 	color: white;
 	margin-top: 125px;

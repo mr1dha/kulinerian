@@ -124,58 +124,25 @@
 
     <div class="container">
     	<div class="row">
+    		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
 		        <div class="card border-0 shadow">
 		          <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img-top">
 		          <div class="card-body">
-		           <h5 class="card-title m-1">Sate Matang</h5>
-		            <p class="m-1 mb-2">
-		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
+		          	<!-- Mengambil data kategori dari DB -->
+		            <?php $kategori = explode(',', $kuliner->kategori) ; ?>
+		            @foreach($kategori  as $item)
+		            <span class="badge badge-primary">{{$item}}</span>
+		            @endforeach
+		           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
+		            <p class="m-1 mb-2" id="deskripsi-kuliner">
+		             {{$kuliner->deskripsi}}
 		            </p>
-		            <button class="btn btn-secondary">Menu Utama</button>
-		            <button class="btn btn-warning text-white">Lihat</button>
+		            <a href="/kuliner/{{$kuliner->id}}"	class="btn btn-warning text-white">Lihat</a>
 		          </div>
 		        </div>
 		    </div>
-		    <div class="col-md-3 col-sm-6 mb-3">
-		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/item2.jpg')}}" alt="" class="card-img-top">
-		          <div class="card-body">
-		           <h5 class="card-title m-1">Soto Aceh</h5>
-		            <p class="m-1 mb-2">
-		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
-		            </p>
-		            <button class="btn btn-secondary">Menu Utama</button>
-		            <button class="btn btn-warning text-white">Lihat</button>
-		          </div>
-		        </div>
-		    </div>
-		   <div class="col-md-3 col-sm-6 mb-3">
-		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img-top">
-		          <div class="card-body">
-		           <h5 class="card-title m-1">Sate Matang</h5>
-		            <p class="m-1 mb-2">
-		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
-		            </p>
-		            <button class="btn btn-secondary">Menu Utama</button>
-		            <button class="btn btn-warning text-white">Lihat</button>
-		          </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 col-sm-6 mb-3">
-		        <div class="card border-0 shadow">
-		          <img src="{{asset('img/item2.jpg')}}" alt="" class="card-img-top">
-		          <div class="card-body">
-		           <h5 class="card-title m-1">Soto Aceh</h5>
-		            <p class="m-1 mb-2">
-		              Disini akan ditampilkan deskripsi singkat dari makanan di atas yang diambil dari database
-		            </p>
-		            <button class="btn btn-secondary">Menu Utama</button>
-		            <button class="btn btn-warning text-white">Lihat</button>
-		          </div>
-		        </div>
-		    </div>
+		    @endforeach
     	</div>
     </div>
       <div class="col-sm-12 mb-4 text-right">

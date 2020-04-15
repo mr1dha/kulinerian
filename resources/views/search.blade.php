@@ -20,6 +20,7 @@
 				</div>
 
 			</div>
+			{{$kuliner}}
 		</div>
 	</div>
 </div>

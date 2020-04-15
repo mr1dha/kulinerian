@@ -11,74 +11,37 @@
 	          </div>
 	      </div>
 	      <div class="col-md-6 col-sm-12">
-	      	<h1 class="card-title mt-2">Sate Matang Bireuen</h1>
+	      	<h1 class="card-title mt-2">{{$kuliner->nama}}</h1>
 	        <hr class="garis-pemisah">
 	      	<h5 class="mt-2 shadow"><i class="fas fa-info-circle mr-2"></i>Deskripsi</h5>
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugit, incidunt optio minima architecto illo, at molestias harum enim esse porro. Dolor quibusdam, doloribus quia quam. Est incidunt quibusdam doloremque!</p>
+	        <p>{{$kuliner->deskripsi}}</p>
 	        <h5 class="shadow"><i class="fas fa-list mr-2"></i>Rincian</h5>
 	        <table class="ml-2 mb-2">
 	          <tr>
 	            <td  class="poin-rincian">Nama Kuliner</td>
-	            <td>Sate Matang Bireuen</td>
+	            <td>{{$kuliner->nama}}</td>
 	          </tr>
 	          <tr>
 	            <td  class="poin-rincian">Kategori</td>
-	            <td>Makanan Utama</td>
+	            <td><?php $kategori = explode(',', $kuliner->kategori) ; ?>
+		            @foreach($kategori  as $item)
+		            <span class="badge badge-primary">{{$item}}</span>
+		            @endforeach</td>
 	          </tr>
 	          <tr>
 	            <td  class="poin-rincian">Bahan Utama</td>
-	            <td>Daging kambing</td>
+	            <td>{{$kuliner->bahan_utama}}</td>
 	          </tr>
 	          <tr>
 	            <td  class="poin-rincian">Asal</td>
-	            <td>Kab. Bireuen</td>
+	            <td>{{$kuliner->asal}}</td>
 	          </tr> 
 	        </table>
 	      </div>
 	    </div>
 	     <div class="row">
-	      <div class="col-md-6 col-sm-12">
-	          <h5 class="shadow"><i class="fas fa-utensils mr-2"></i>Resep Memasak</h5>
-	          <h6 class="mt-3 font-weight-bold">ALAT DAN BAHAN</h6>
-	          <table class="table" width="100%">
-	          	<thead>
-	          	<tr>
-	          		<th scope="col">Alat</th>
-	          		<th scope="col">Bahan</th>
-	          	</tr>
-	          	</thead>
-	          	<tbody>
-	          	<tr>
-	          		<td>Alat 1</td>
-	          		<td>Bahan 1</td>
-	          	</tr>
-	          	<tr>
-	          		<td>Alat 1</td>
-	          		<td>Bahan 1</td>
-	          	</tr>
-	          	<tr>
-	          		<td>Alat 1</td>
-	          		<td>Bahan 1</td>
-	          	</tr>
-	          	<tr>
-	          		<td>Alat 1</td>
-	          		<td>Bahan 1</td>
-	          	</tr>
-	          	</tbody>
-	          </table>
-
-	          <h6 class="mt-3 font-weight-bold">CARA MEMASAK</h6>
-	          <ol>
-	          	<li>Ini adalah langkah 1</li>
-	          	<li>Ini adalah langkah 2</li>
-	          	<li>Ini adalah langkah 3</li>
-	          	<li>Ini adalah langkah 4</li>
-	          	<li>Ini adalah langkah 5</li>
-	          	<li>Ini adalah langkah 6</li>
-	          </ol>
-	      </div>
-	      <div class="col-md-6 col-sm-12">
-	      	<h5 class="shadow"><i class="fas fa-map-marker-alt mr-2"></i>Rekomendasi tempat</h5>
+	      <div class="col-md-6 col-sm-12 mt-3">
+	      		<h5 class="shadow"><i class="fas fa-map-marker-alt mr-2"></i>Rekomendasi tempat</h5>
 	      	<div class="card shadow mt-3">
 				<div class="row no-gutters">
 					<div class="col-md-4">
@@ -110,6 +73,42 @@
 						</div>
 					</div>
 				</div>
+			</div>
+
+	          <h5 class="shadow mt-3"><i class="fas fa-utensils mr-2"></i>Alat dan Bahan</h5>
+	          <?php
+	          	$bahan = explode(',', $kuliner->alat_bahan);?>
+	          	
+	          <table class="table" width="100%">
+	          	<thead>
+	          	<tr>
+	          		<th scope="col" width="10%">No</th>
+	          		<th scope="col">Alat dan Bahan</th>
+	          	</tr>
+	          	</thead>
+	          	<tbody>
+	          	@foreach($bahan as $i => $item)
+	          	<tr>
+	          		<td>{{++$i}}</td>
+	          		<td>{{$item}}</td>
+	          	</tr>
+	          	@endforeach
+	          	
+	          	</tbody>
+	          </table>
+	      </div>
+	      <?php  $steps = explode('.',  $kuliner->cara_masak) ?>
+	      <div class="col-md-6 col-sm-12 mt-3">
+	      	<h5 class="shadow"><i class="fas fa-utensils mr-2 "></i>Cara Memasak</h5>
+	         <div class="list-group">
+	         @foreach ($steps as $i => $step) 
+			  <div class="list-group-item list-group-item-action">
+			    <div class="d-flex w-100 justify-content-between">
+			      <h6 class="mb-1">LANGKAH {{++$i}}</h6>
+			    </div>
+			    <p class="mb-1">{{$step}}.</p>
+			  </div>
+			  @endforeach
 			</div>
 	      </div>
 	</div>
