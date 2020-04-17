@@ -15,12 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'KulinerController@index');
 
-Route::get('/search', 'KulinerController@search');
+Route::get('/search', 'KulinerController@index');
 
-Route::get('/kuliner', 'KulinerController@kuliner');
+Route::get('/search/{keyword}', 'KulinerController@search', compact('keyword'));
 
-Route::get('/kuliner/tambah', 'KulinerController@create');
+Route::get('/kuliner', 'KulinerController@index');
+
+Route::get('/admin/tambah', 'KulinerController@create');
+
+Route::post('/admin/tambah', 'KulinerController@store');
 
 Route::get('/kuliner/{kuliner}', 'KulinerController@show');
 
 Route::get('/kategori', 'KulinerController@kategori');
+
+Route::get('/admin', 'KulinerController@admin');

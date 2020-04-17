@@ -49,6 +49,7 @@
 .card-body p#deskripsi-kuliner{
 	font-size: 13px;
 	align-items: justify;
+	min-height: 57px;
 }
 
 .welcome .display-4{
@@ -194,4 +195,12 @@ h4.popular-sign{
   background-color: #343a40 !important;
   border-bottom: 3px solid #ffc107;
   transition: background-color border-bottom 200ms linear;
+}
+
+div.produk{
+	height: 370px !important;
+}
+
+div.produk{
+	height: 370px !important;
 }

@@ -77,6 +77,7 @@
 			  	<button type="submit" class="btn btn-warning btn-lg" href="{{url('/search')}}" role="button">CARI</button>
 			</form> -->
 	</div>
+	<!-- END JUMBOTRON -->
 
 	<!-- SLIDE IMAGE -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -117,6 +118,7 @@
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
+	<!-- END SLIDE IMAGE -->
 
 	<!-- DAFTAR KULINER POPULER -->
 	<h4 class="text-center font-weight-bold text-warning py-3 mb-3 bg-dark">
@@ -150,6 +152,7 @@
       </div>
     </div>
   </div>
+  	<!-- END DAFTAR KULINER POPULER -->
 
   <!-- FOOOTER -->
   <div class="footer mt-3 bg-dark">

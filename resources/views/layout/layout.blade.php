@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome-free/css/all.min.css')}}">
 	<title>@yield("title","Kulinerian")</title>
 </head>
+
 <body>
 	<!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow text-warning fixed-top nav-layout">
@@ -16,7 +17,7 @@
         <i class="fa-1x fas fa-cloud-meatball text-warning"></i>
         <span class="font-weight-bold text-warning">KULINERIAN</span>
       </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -69,17 +70,19 @@
 	  </div>
     </div>
   </nav>
+  <!-- END NAVBAR -->
 
   @yield('content')
 
+<!-- FOOTER -->
   <div class="footer mt-3 bg-dark">
     <p class="mb-0">Made with <span style="color: red">&#9829 </span>by: Aisyah, Lia, Ridha, Zikri</p>
   </div>
+<!-- END FOOTER -->
 
-
-	<script src="{{asset('assets/js/jquery-3.5.0.min.js')}}"></script>
+	<script src="{{asset('js/jquery-3.5.0.min.js')}}"></script>
 <!--     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-    <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('assets/js/script.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('js/script.js')}}"></script>
 </body>
 </html>

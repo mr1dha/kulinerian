@@ -23,9 +23,9 @@
 	          </tr>
 	          <tr>
 	            <td  class="poin-rincian">Kategori</td>
-	            <td><?php $kategori = explode(',', $kuliner->kategori) ; ?>
+	            <td><?php $kategori = explode(';', $kuliner->kategori) ; ?>
 		            @foreach($kategori  as $item)
-		            <span class="badge badge-primary">{{$item}}</span>
+		            <span class="badge badge-primary p-1">{{$item}}</span>
 		            @endforeach</td>
 	          </tr>
 	          <tr>
@@ -46,7 +46,7 @@
 				<div class="row no-gutters">
 					<div class="col-md-4">
 						<div class="embed-responsive embed-responsive-1by1">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127084.21322303842!2d95.35839756038332!3d5.510227607960808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x64aca37c6e22a38c!2sSate%20Matang%20D&#39;Wan!5e0!3m2!1sid!2sid!4v1586607248509!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							<iframe src="{{$kuliner->url_tempat}}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 						</div>			
 					</div>
 					<div class="col-md-8">
@@ -58,26 +58,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="card shadow mt-3">
-				<div class="row no-gutters">
-					<div class="col-md-4">
-						<div class="embed-responsive embed-responsive-1by1">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31768.810017540265!2d95.35140172943477!3d5.552005755689538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0e8365d1d136ffe!2sSate%20matang%20cek%20wan!5e0!3m2!1sid!2sid!4v1586608293567!5m2!1sid!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</div>			
-					</div>
-					<div class="col-md-8">
-						<div class="card-body">
-							<h6 class="card-title">Sate matang cek wan</h6>
-							<p class="card-text">Jl. Mawar, No. 01, Darussalam, Kota Banda Aceh</p>
-							<a href="https://goo.gl/maps/fjnaozVzwR9c8SnB6" target="#blank" class="text-white btn btn-warning">Buka Peta</a>
-						</div>
-					</div>
-				</div>
-			</div>
 
 	          <h5 class="shadow mt-3"><i class="fas fa-utensils mr-2"></i>Alat dan Bahan</h5>
 	          <?php
-	          	$bahan = explode(',', $kuliner->alat_bahan);?>
+	          	$bahan = explode(';', $kuliner->alat_bahan);?>
 	          	
 	          <table class="table" width="100%">
 	          	<thead>
@@ -97,7 +81,7 @@
 	          	</tbody>
 	          </table>
 	      </div>
-	      <?php  $steps = explode('.',  $kuliner->cara_masak) ?>
+	      <?php  $steps = explode(';',  $kuliner->cara_masak) ?>
 	      <div class="col-md-6 col-sm-12 mt-3">
 	      	<h5 class="shadow"><i class="fas fa-utensils mr-2 "></i>Cara Memasak</h5>
 	         <div class="list-group">
