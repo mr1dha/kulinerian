@@ -128,14 +128,17 @@
     	<div class="row">
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
-		        <div class="card border-0 shadow">
+		        <div class="card border-0 shadow produk">
 		          <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img-top">
 		          <div class="card-body">
+
 		          	<!-- Mengambil data kategori dari DB -->
-		            <?php $kategori = explode(',', $kuliner->kategori) ; ?>
+		            <?php $kategori = explode(';', $kuliner->kategori) ; ?>
+		            
 		            @foreach($kategori  as $item)
-		            <span class="badge badge-primary">{{$item}}</span>
+		            	<span class="badge badge-info">{{$item}}</span>
 		            @endforeach
+
 		           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
 		            <p class="m-1 mb-2" id="deskripsi-kuliner">
 		             {{$kuliner->deskripsi}}

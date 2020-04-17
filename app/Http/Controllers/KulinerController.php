@@ -39,7 +39,7 @@ class KulinerController extends Controller
     public function store(Request $request)
     {
         Kuliner::create($request->all());
-        return redirect('/');
+        return redirect('/admin') -> with('status','Kuliner "'.$request->nama.'" berhasil ditambahkan');
     }
 
     /**
@@ -85,14 +85,13 @@ class KulinerController extends Controller
      */
     public function destroy(Kuliner $kuliner)
     {
-        //
+        Kuliner::destroy($kuliner->id);
+        return redirect('/admin') -> with('status','Kuliner "'.$kuliner->nama.'" berhasil dihapus');
     }
 
-
-
-    public function search($keyword){
+    public function cari($keyword){
         //Qurey DB untuk mencari sesuai keyword dan langsung di return ke view
-        return view('search', compact('keyword'));
+        return view('cari', compact('keyword'));
     }
 
     public function kategori(){
@@ -101,7 +100,7 @@ class KulinerController extends Controller
     }
 
     public function admin(){
-        $kuliners = Kuliner::all();
+        $kuliners = Kuliner::paginate(12);
         return view('admin', compact('kuliners'));
     }
 }

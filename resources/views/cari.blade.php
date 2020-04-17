@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container" id="search-container">
-	<h1><i class="fas fa-search mr-1"></i>Hasil pencarian untuk {{$keyword}}</h1>
+	<h1><i class="fas fa-search mr-1"></i>Hasil pencarian untuk "{{$keyword}}"</h1>
 	<hr class="mb-4">
 
 	<div class="card shadow">

@@ -5,8 +5,20 @@
 @section('content')
 
 <div class="container" id="search-container">
-	<h1><i class="fas fa-user"></i> Selamat datang Admin!</h1>
-	<hr class="mb-4 hrhr">
+	<h1 class=""><i class="fas fa-user"></i> Selamat datang Admin!</h1>
+		<!-- Menampilkan pesan status -->
+		@if(session('status'))
+			<div class="alert alert-success">
+				{{session('status')}} <i class="fa fa-thumbs-up"></i>
+			</div>
+		@endif
+	<hr> 	
+	<div class="row">
+
+	{{$kuliners->links()}}
+
+	<a href="{{url('/admin/tambah')}}" class="btn btn-primary mb-4 ml-auto mr-3"><i class="fas fa-plus"></i> Tambah Kuliner</a>
+	</div>
 	    <div class="row" >
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
@@ -18,7 +30,7 @@
 		            <?php $kategori = explode(';', $kuliner->kategori) ; ?>
 		            @foreach($kategori  as $item)
 		            
-		            <span class="badge badge-primary">{{$item}}</span>
+		            <span class="badge badge-info">{{$item}}</span>
 		            @endforeach
 		           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
 		            <p class="m-1 mb-2" id="deskripsi-kuliner">
@@ -27,7 +39,7 @@
 		           <div class="nasvigasi-admin">
 			           	 <a href="{{url('/kuliner/'.$kuliner->id)}}"	class="btn btn-warning text-white">Lihat</a>
 			            <a href="{{url('/edit/'.$kuliner->id)}}"	class="btn btn-primary text-white">Edit</a>
-			            <form action="/admin" method="post" class="d-inline">
+			            <form action="{{url('/admin/delete/'.$kuliner->id)}}" method="post" class="d-inline">
 			            	@method('delete')
 			            	@csrf
 			            	<button type="submit" class="btn btn-danger">Hapus</button>
