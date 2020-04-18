@@ -16,7 +16,7 @@ class KulinerController extends Controller
     public function index()
     {
         // Halaman Utama
-        $kuliners = Kuliner::all();
+        $kuliners = Kuliner::orderBy('id', 'desc')->offset(0)->limit(8)->get();
         return view('home', compact('kuliners'));
     }
 
@@ -153,7 +153,7 @@ class KulinerController extends Controller
 
     public function admin(Request $request){
         if($request->session()->has('login')){
-            $kuliners = Kuliner::paginate(12);
+            $kuliners = Kuliner::orderBy('id', 'desc')->paginate(12);
             return view('admin', compact('kuliners'));
         }
          return redirect('/admin/login');

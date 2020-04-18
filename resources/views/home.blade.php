@@ -128,24 +128,29 @@
     	<div class="row">
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
-		        <div class="card border-0 shadow produk">
+		        <a href="/kuliner/{{$kuliner->id}}">
+		        	<div class="card border-0 shadow produk">
 		          <img src="{{asset('img/'.$kuliner->gambar)}}" alt="" class="card-img-top">
-		          <div class="card-body">
+		          <div class="card-body p-0 px-3">
 
 		          	<!-- Mengambil data kategori dari DB -->
 		            <?php $kategori = explode(';', $kuliner->kategori) ; ?>
 		            
-		            @foreach($kategori  as $item)
-		            	<span class="badge badge-info">{{$item}}</span>
-		            @endforeach
-
+		            <div class="tag-kategori">
+		            	@foreach($kategori  as $i => $item)
+		            		@if($i < 2)
+		            		<span class="badge badge-primary">{{$item}}</span>
+		            		@endif
+		            	@endforeach
+		            </div>
 		           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
 		            <p class="m-1 mb-2" id="deskripsi-kuliner">
 		             {{$kuliner->deskripsi}}
 		            </p>
-		            <a href="/kuliner/{{$kuliner->id}}"	class="btn btn-warning text-white">Lihat</a>
+		            <a href="/kuliner/{{$kuliner->id}}"	class="w-100 btn btn-warning text-white">Lihat</a>
 		          </div>
 		        </div>
+		        </a>
 		    </div>
 		    @endforeach
     	</div>
@@ -159,9 +164,9 @@
     <p class="mb-0">Made with <span style="color: red">&#9829 </span>by: Aisyah, Lia, Ridha, Zikri</p>
   </div>
   
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script src="{{asset('js/script.js')}}"></script>
+	<script src="{{asset('js/script.js')}}"></script> -->
 </body>
 </html>

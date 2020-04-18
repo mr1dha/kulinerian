@@ -23,31 +23,37 @@
 	    <div class="row" >
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
-		        <div class="card border-0 shadow produk">
-		          <img src="{{asset('img/'.$kuliner->gambar)}}" alt="" class="card-img-top">
-		          <div class="card-body">
+				<a href="/kuliner/{{$kuliner->id}}">
+					<div class="card border-0 shadow produk">
+			          <img src="{{asset('img/'.$kuliner->gambar)}}" alt="" class="card-img-top">
+			          <div class="card-body py-0 px-3">
 
-		          	<!-- Mengambil data kategori dari DB -->
-		            <?php $kategori = explode(';', $kuliner->kategori) ; ?>
-		            @foreach($kategori  as $item)
-		            
-		            <span class="badge badge-info">{{$item}}</span>
-		            @endforeach
-		           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
-		            <p class="m-1 mb-2" id="deskripsi-kuliner">
-		             {{$kuliner->deskripsi}}
-		            </p>
-		           <div class="nasvigasi-admin">
-			           	 <a href="{{url('/kuliner/'.$kuliner->id)}}"	class="btn btn-warning text-white">Lihat</a>
-			            <a href="{{url('/admin/edit/'.$kuliner->id)}}"	class="btn btn-primary text-white">Edit</a>
-			            <form action="{{url('/admin/delete/'.$kuliner->id)}}" method="post" class="d-inline">
-			            	@method('delete')
-			            	@csrf
-			            	<button type="submit" class="btn btn-danger" onclick=" return confirm('Yakin mau dihapus?')">Hapus</button>
-			            </form>
-		           </div>
-		          </div>
-		        </div>
+			          	<!-- Mengambil data kategori dari DB -->
+			            <?php $kategori = explode(';', $kuliner->kategori) ; ?>
+			             <div class="tag-kategori">
+			            	@foreach($kategori  as $i => $item)
+			            		@if($i < 2)
+			            		<span class="badge badge-primary">{{$item}}</span>
+			            		@endif
+			            	@endforeach
+			            </div>
+			            
+			           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
+			            <p class="m-1 mb-2" id="deskripsi-kuliner">
+			             {{$kuliner->deskripsi}}
+			            </p>
+			           <div class="nasvigasi-admin">
+				           	 <a href="{{url('/kuliner/'.$kuliner->id)}}"	class="btn btn-warning text-white">Lihat</a>
+				            <a href="{{url('/admin/edit/'.$kuliner->id)}}"	class="btn btn-primary text-white">Edit</a>
+				            <form action="{{url('/admin/delete/'.$kuliner->id)}}" method="post" class="d-inline">
+				            	@method('delete')
+				            	@csrf
+				            	<button type="submit" class="btn btn-danger" onclick=" return confirm('Yakin mau dihapus?')">Hapus</button>
+				            </form>
+			           </div>
+			          </div>
+			        </div>
+				</a>
 		    </div>
 		    @endforeach
     	</div>

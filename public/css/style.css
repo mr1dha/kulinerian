@@ -198,11 +198,8 @@ h4.popular-sign{
 }
 
 div.produk{
-	height: 370px !important;
-}
-
-div.produk{
-	height: 370px !important;
+	height: 320px !important;
+	box-sizing: border-box;
 }
 
 #login-form{
@@ -239,4 +236,28 @@ body{
 
 .img{
 	object-fit: cover;
+}
+
+p#deskripsi-kuliner{
+	color: black;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp : 3;
+	-webkit-box-orient: vertical;
+}
+
+.tag-kategori{
+	position: absolute;
+	top: 145px;
+	right: 10px;
+}
+
+h5.card-title{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.teks-kuliner	{
+	position: relative;
 }
