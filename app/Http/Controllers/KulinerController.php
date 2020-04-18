@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Kuliner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class KulinerController extends Controller
 {
@@ -24,10 +25,13 @@ class KulinerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //Menambahkan kuliner baru
-        return view('tambah');
+         if($request->session()->has('login')){
+            return view('tambah');
+        }
+        return redirect('/admin/login') ;
     }
 
     /**
@@ -38,7 +42,24 @@ class KulinerController extends Controller
      */
     public function store(Request $request)
     {
-        Kuliner::create($request->all());
+        $file = $request->file('gambar');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $folder_tujuan = 'img';
+        $file->move($folder_tujuan, $nama_file);
+
+        Kuliner::create([
+                 'nama' => $request->nama,
+                'deskripsi' => $request->deskripsi,
+                'kategori' => $request->kategori,
+                'bahan_utama' => $request->bahan_utama,
+                'asal' => $request->asal,
+                'alat_bahan' => $request->alat_bahan,
+                'cara_masak' => $request->cara_masak,
+                'nama_tempat' => $request->nama_tempat,
+                'url_tempat' => $request->url_tempat,
+                'gambar' => $nama_file
+        ]);
+
         return redirect('/admin') -> with('status','Kuliner "'.$request->nama.'" berhasil ditambahkan');
     }
 
@@ -77,6 +98,16 @@ class KulinerController extends Controller
      */
     public function update(Request $request, Kuliner $kuliner)
     {
+        $nama_file = $kuliner->gambar;
+        if($request->hasFile('gambar')){
+            $nama_file = time()."_".$request->file('gambar')->getClientOriginalName();
+            $folder_tujuan = 'img';
+            $request->file('gambar')->move($folder_tujuan, $nama_file);
+            $image_path = "img/".$kuliner->gambar;
+            if(File::exists($image_path))
+                File::delete($image_path);
+        }
+
         Kuliner::where('id', $kuliner->id)
             ->update([
                 'nama' => $request->nama,
@@ -88,7 +119,7 @@ class KulinerController extends Controller
                 'cara_masak' => $request->cara_masak,
                 'nama_tempat' => $request->nama_tempat,
                 'url_tempat' => $request->url_tempat,
-                'gambar' => $request->gambar
+                'gambar' => $nama_file
             ]);
 
             return redirect('/admin') -> with('status','Kuliner berhasil diedit');
@@ -102,6 +133,10 @@ class KulinerController extends Controller
      */
     public function destroy(Kuliner $kuliner)
     {
+        $image_path = "img/".$kuliner->gambar;
+        if(File::exists($image_path))
+            File::delete($image_path);
+
         Kuliner::destroy($kuliner->id);
         return redirect('/admin') -> with('status','Kuliner "'.$kuliner->nama.'" berhasil dihapus');
     }

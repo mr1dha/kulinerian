@@ -129,7 +129,7 @@
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
 		        <div class="card border-0 shadow produk">
-		          <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img-top">
+		          <img src="{{asset('img/'.$kuliner->gambar)}}" alt="" class="card-img-top">
 		          <div class="card-body">
 
 		          	<!-- Mengambil data kategori dari DB -->
@@ -150,9 +150,6 @@
 		    @endforeach
     	</div>
     </div>
-      <div class="col-sm-12 mb-4 text-right">
-        <button class="btn btn-warning mt-3 font-weight-bold">Selengkapnya</button>
-      </div>
     </div>
   </div>
   	<!-- END DAFTAR KULINER POPULER -->

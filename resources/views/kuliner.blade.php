@@ -7,7 +7,7 @@
 	    <div class="row">
 	      <div class="col-md-6 col-sm-12">
 	          <div class="card border-0">
-	            <img src="{{asset('img/item1.jpg')}}" alt="" class="card-img mt-3">
+	            <img src="{{asset('img/'.$kuliner->gambar)}}" alt="" class="card-img mt-3 img" height="340px">
 	          </div>
 	      </div>
 	      <div class="col-md-6 col-sm-12">
@@ -89,7 +89,7 @@
 	         @foreach ($steps as $i => $step) 
 			  <div class="list-group-item list-group-item-action">
 			    <div class="d-flex w-100 justify-content-between">
-			      <h6 class="mb-1">LANGKAH {{++$i}}</h6>
+			      <h6 class="mb-1 font">LANGKAH {{++$i}}</h6>
 			    </div>
 			    <p class="mb-1">{{$step}}.</p>
 			  </div>

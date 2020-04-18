@@ -7,8 +7,9 @@
 	<div class="row">
 		<div class="col-lg-7">
 			<h1>Edit Kuliner {{$kuliner->nama}}</h1>
-			<form action="/admin/edit/{{$kuliner->id}}" method="post">
+			<form action="/admin/edit/{{$kuliner->id}}" method="post" enctype="multipart/form-data">
 			@csrf
+			{{method_field('PATCH')}}
 			  <div class="form-group">
 			    <h5 >Nama kuliner</h5>
 			    <input type="text" class="form-control" name="nama"  required value="{{$kuliner->nama}}">
@@ -61,14 +62,14 @@
 			    <textarea rows="3" type="text" class="form-control" name="url_tempat"  required>{{$kuliner->url_tempat}}</textarea>
 			  </div>
 
-			  <img src="{{asset('img/item1.jpg')}}" alt="gambar kuliner" class="image-fluid" width="200px" height="150px" style="object-fit: cover;">
+			  <img src="{{asset('img/'.$kuliner->gambar)}}" alt="gambar kuliner" class="image-fluid" width="200px" height="150px" style="object-fit: cover;">
 
 			   <div class="form-group">
 			    <h5 >Gambar Kuliner</h5>
 			    <input type="file" class="form-control" name="gambar"  >
 			  </div>
 
-			  <button type="submit" class="mt-4 btn btn-primary"> <i class="fas fa-plus"></i> Selesai Edit</button>
+			  <button type="submit" class="mt-4 btn btn-primary"> <i class="fas fa-plus"></i> Simpan Edit</button>
 			  <a href="{{url('/admin')}}" class="btn btn-danger ml-3 mt-4">Batal</a>
 			</form>
 		</div>

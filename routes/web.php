@@ -41,4 +41,4 @@ Route::get('/admin/logout', 'PageController@logout');
 
 Route::get('/admin/edit/{kuliner}', 'KulinerController@edit');
 
-Route::post('/admin/edit/{kuliner}', 'KulinerController@update');
+Route::patch('/admin/edit/{kuliner}', 'KulinerController@update');

@@ -236,3 +236,7 @@ body{
 .pilihan{
 	display: inline;
 }
+
+.img{
+	object-fit: cover;
+}
