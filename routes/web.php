@@ -36,3 +36,5 @@ Route::get('/{keyword}', 'KulinerController@cari');
 Route::get('/admin/login', 'PageController@login');
 
 Route::post('/admin/login', 'PageController@validasi');
+
+Route::get('/admin/logout', 'PageController@logout');

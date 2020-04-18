@@ -16,8 +16,9 @@
 	<div class="row">
 
 	{{$kuliners->links()}}
-
+	
 	<a href="{{url('/admin/tambah')}}" class="btn btn-primary mb-4 ml-auto mr-3"><i class="fas fa-plus"></i> Tambah Kuliner</a>
+	<a href="{{url('/admin/logout')}}" class="btn btn-danger mb-4 mr-3"><i class="fas fa-sign-out-alt"></i> Logout</a>
 	</div>
 	    <div class="row" >
     		@foreach($kuliners as $kuliner)
@@ -42,7 +43,7 @@
 			            <form action="{{url('/admin/delete/'.$kuliner->id)}}" method="post" class="d-inline">
 			            	@method('delete')
 			            	@csrf
-			            	<button type="submit" class="btn btn-danger">Hapus</button>
+			            	<button type="submit" class="btn btn-danger" onclick=" return confirm('Yakin mau dihapus?')">Hapus</button>
 			            </form>
 		           </div>
 		          </div>

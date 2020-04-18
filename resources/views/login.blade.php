@@ -1,6 +1,6 @@
 @extends('layout/layout')
 
-@section('title', 'Halaman Admin')
+@section('title', 'Halaman Login')
 
 @section('content')
 <div class="row justify-content-center">
@@ -36,7 +36,7 @@
 						</div>
 					</div>
 					<p class="text-left reg">Hubungi operator untuk mendapatkan username dan password</p>
-					<button type="submit" class="btn btn-warning	">MASUK</button>
+					<button type="submit" class="btn btn-warning font-weight-bold w-50	">MASUK</button>
 				</form>
 			</div>
 		</div>

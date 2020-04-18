@@ -99,8 +99,11 @@ class KulinerController extends Controller
         return view('kategori', compact('kuliners'));
     }
 
-    public function admin(){
-        $kuliners = Kuliner::paginate(12);
-        return view('admin', compact('kuliners'));
+    public function admin(Request $request){
+        if($request->session()->has('login')){
+            $kuliners = Kuliner::paginate(12);
+            return view('admin', compact('kuliners'));
+        }
+         return redirect('/admin/login');
     }
 }
