@@ -204,3 +204,35 @@ div.produk{
 div.produk{
 	height: 370px !important;
 }
+
+#login-form{
+	margin-top: 15%;
+	border-color: green;
+	box-shadow: 10px 10px 5px grey;
+}
+#daftar-form{
+	margin-top: 45%;
+	border-color: orange;
+	box-shadow: 10px 10px 5px grey;	
+	margin-bottom: 120px;
+}
+#login-form button{
+	width: 50%;
+}
+
+body{
+	background-image: url(../img/bg4-cp.jpg);
+	background-size: cover;
+}
+
+.reg{
+	font-size: 14px;
+}
+
+#login-form .form-control:focus{
+	border-color:  #28a745;
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);x
+}
+.pilihan{
+	display: inline;
+}

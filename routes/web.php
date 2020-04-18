@@ -17,7 +17,6 @@ Route::get('/', 'KulinerController@index');
 
 Route::get('/search', 'KulinerController@index');
 
-
 Route::get('/kuliner', 'KulinerController@index');
 
 Route::get('/admin/tambah', 'KulinerController@create');
@@ -33,3 +32,7 @@ Route::get('/admin', 'KulinerController@admin');
 Route::delete('/admin/delete/{kuliner}', 'KulinerController@destroy');
 
 Route::get('/{keyword}', 'KulinerController@cari');
+
+Route::get('/admin/login', 'PageController@login');
+
+Route::post('/admin/login', 'PageController@validasi');
