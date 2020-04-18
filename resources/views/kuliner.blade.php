@@ -51,8 +51,9 @@
 					</div>
 					<div class="col-md-8">
 						<div class="card-body">
-							<h6 class="card-title">Sate Matang D'Wan</h6>
-							<p class="card-text">Jl. Mawar, No. 01, Darussalam, Kota Banda Aceh</p>
+							<h6 class="card-title font-weight-bold">{{$kuliner->nama_tempat}}</h6>
+							<p class="card-text">{{$kuliner->nama_tempat}} adalah tempat yang direkomendasikan oleh kulinerian untuk mencicipi {{$kuliner->nama}} </p>
+							<!-- <p class="card-text">Jl. Mawar, No. 01, Darussalam, Kota Banda Aceh</p> -->
 							<a href="https://goo.gl/maps/fLpcVRM8tqLDYta58" target="#blank" class="text-white btn btn-warning">Buka Peta</a>
 						</div>
 					</div>

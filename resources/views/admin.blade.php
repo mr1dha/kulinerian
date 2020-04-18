@@ -39,7 +39,7 @@
 		            </p>
 		           <div class="nasvigasi-admin">
 			           	 <a href="{{url('/kuliner/'.$kuliner->id)}}"	class="btn btn-warning text-white">Lihat</a>
-			            <a href="{{url('/edit/'.$kuliner->id)}}"	class="btn btn-primary text-white">Edit</a>
+			            <a href="{{url('/admin/edit/'.$kuliner->id)}}"	class="btn btn-primary text-white">Edit</a>
 			            <form action="{{url('/admin/delete/'.$kuliner->id)}}" method="post" class="d-inline">
 			            	@method('delete')
 			            	@csrf

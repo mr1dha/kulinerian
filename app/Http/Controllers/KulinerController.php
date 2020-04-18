@@ -60,9 +60,12 @@ class KulinerController extends Controller
      * @param  \App\Kuliner  $kuliner
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kuliner $kuliner)
+    public function edit(Kuliner $kuliner, Request $request)
     {
-        //
+         if($request->session()->has('login')){
+            return view('edit', compact('kuliner'));
+        }
+         return redirect('/admin/login');
     }
 
     /**
@@ -74,7 +77,21 @@ class KulinerController extends Controller
      */
     public function update(Request $request, Kuliner $kuliner)
     {
-        //
+        Kuliner::where('id', $kuliner->id)
+            ->update([
+                'nama' => $request->nama,
+                'deskripsi' => $request->deskripsi,
+                'kategori' => $request->kategori,
+                'bahan_utama' => $request->bahan_utama,
+                'asal' => $request->asal,
+                'alat_bahan' => $request->alat_bahan,
+                'cara_masak' => $request->cara_masak,
+                'nama_tempat' => $request->nama_tempat,
+                'url_tempat' => $request->url_tempat,
+                'gambar' => $request->gambar
+            ]);
+
+            return redirect('/admin') -> with('status','Kuliner berhasil diedit');
     }
 
     /**

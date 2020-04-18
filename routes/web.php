@@ -38,3 +38,7 @@ Route::get('/admin/login', 'PageController@login');
 Route::post('/admin/login', 'PageController@validasi');
 
 Route::get('/admin/logout', 'PageController@logout');
+
+Route::get('/admin/edit/{kuliner}', 'KulinerController@edit');
+
+Route::post('/admin/edit/{kuliner}', 'KulinerController@update');

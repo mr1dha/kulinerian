@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-lg-7">
 			<h1>Tambah Kuliner Baru</h1>
-			<form accept="/admin/tambah" method="post">
+			<form action="/admin/tambah" method="post">
 			@csrf
 			  <div class="form-group">
 			    <h5 >Nama kuliner</h5>
