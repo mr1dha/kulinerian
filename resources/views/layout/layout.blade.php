@@ -24,12 +24,12 @@
 	    <ul class="navbar-nav ml-auto">
 	       <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          KATEGORI 1
+	          JENIS MAKANAN
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="{{url('/kategori')}}">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <a class="dropdown-item" href="#">Something else here</a>
+	          <a class="dropdown-item" href="{{url('/kategori/makanan berat')}}">Makanan Berat</a>
+	          <a class="dropdown-item" href="{{url('/kategori/makanan ringan')}}">Makanan Ringan</a>
+	          <a class="dropdown-item" href="{{url('/kategori/cemilan')}}">Cemilan</a>
 	        </div>
 	      </li>
 	      <li class="nav-item dropdown">

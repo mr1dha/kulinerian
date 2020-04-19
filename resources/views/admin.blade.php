@@ -21,7 +21,7 @@
 	<a href="{{url('/admin/logout')}}" class="btn btn-danger mb-4 mr-3"><i class="fas fa-sign-out-alt"></i> Logout</a>
 	</div>
 	    <div class="row" >
-    		@foreach($kuliners as $kuliner)
+    @foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
 				<a href="/kuliner/{{$kuliner->id}}">
 					<div class="card border-0 shadow produk">
@@ -38,7 +38,7 @@
 			            	@endforeach
 			            </div>
 			            
-			           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
+			           <p class="card-title m-1">{{$kuliner->nama}}</p>
 			            <p class="m-1 mb-2" id="deskripsi-kuliner">
 			             {{$kuliner->deskripsi}}
 			            </p>

@@ -6,9 +6,16 @@
 <div class="container" id="search-container">
 	<h1><i class="fas fa-search mr-1"></i>Hasil pencarian untuk "{{$keyword}}"</h1>
 	<hr class="mb-4">
+	<!-- Status jika kuliner tidak ditemukan -->
+	@if($kuliners->isEmpty())
+			<div class="alert alert-warning text-center">
+				 <i class="fa-7x fas fa-search-minus mb-3"></i>
+				<p class="lead ">Oops ! Sayang sekali kuliner <span class="font-weight-bold">'{{$keyword}}'</span> belum ada di Kulinerian</p>
+			</div>
+		@endif
 
 	@foreach($kuliners as $kuliner)
-	<div class="card shadow">
+	<div class="card shadow mb-3">
 		<div class="row no-gutters">
 			<div class="col-md-4">
 				<img class="card-img" src="{{asset('img/'.$kuliner->gambar)}}" alt="kuliner">

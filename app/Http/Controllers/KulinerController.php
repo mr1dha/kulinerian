@@ -150,13 +150,8 @@ class KulinerController extends Controller
                     ->orWhere('kategori', 'LIKE', "%{$keyword}%")
                     ->orWhere('asal', 'LIKE', "%{$keyword}%")
                     ->orWhere('bahan_utama', 'LIKE', "%{$keyword}%")->paginate(5);
-
+        
         return view('cari', compact('kuliners','keyword'));
-    }
-
-    public function kategori(){
-        $kuliners = Kuliner::all();
-        return view('kategori', compact('kuliners'));
     }
 
     public function admin(Request $request){
@@ -165,5 +160,10 @@ class KulinerController extends Controller
             return view('admin', compact('kuliners'));
         }
          return redirect('/admin/login');
+    }
+
+     public function kategori($keyword){
+        $kuliners = Kuliner::where('kategori', 'LIKE', "%{$keyword}%")->paginate(12);
+        return view('kategori', compact('kuliners','keyword'));
     }
 }

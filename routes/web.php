@@ -45,3 +45,4 @@ Route::get('/admin/edit/{kuliner}', 'KulinerController@edit');
 
 Route::patch('/admin/edit/{kuliner}', 'KulinerController@update');
 
+Route::get('/kategori/{keyword}', 'KulinerController@kategori');

@@ -140,7 +140,7 @@
 		            		@endif
 		            	@endforeach
 		            </div>
-		           <h5 class="card-title m-1">{{$kuliner->nama}}</h5>
+		           <p class="card-title m-1">{{$kuliner->nama}}</p>
 		            <p class="m-1 mb-2" id="deskripsi-kuliner">
 		             {{$kuliner->deskripsi}}
 		            </p>
