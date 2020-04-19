@@ -68,14 +68,11 @@
 		  <h1 class="display-4">TEMUKAN SELERA KULINERMU DI <br></h1>
 		  <hr class="my-4">
 		  <span class="web-title">KULINERIAN</span>
-			<input type="text" class="search-bar" name="cari" placeholder="Mau cari kuliner apa?">
-		  	<a class="btn btn-warning btn-lg" href="{{url('/search')}}" role="button">CARI</a>
-			
-			<!-- Jika ingin mencari data dari DB pakai form di bawah ini hapus anker dan input di -->
-		  	<!-- <form action="" method="post">
-				<input type="text" class="search-bar" name="cari" placeholder="Mau cari kuliner apa?">
-			  	<button type="submit" class="btn btn-warning btn-lg" href="{{url('/search')}}" role="button">CARI</button>
-			</form> -->
+		  	<form action="{{url('/pencarian')}}" method="post">
+		  		@csrf
+				<input type="text" class="search-bar" name="keyword" placeholder="Mau cari kuliner apa?">
+			  	<button type="submit" class="btn btn-warning btn-lg">CARI</button>
+			</form>
 	</div>
 	<!-- END JUMBOTRON -->
 

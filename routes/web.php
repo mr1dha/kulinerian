@@ -31,7 +31,9 @@ Route::get('/admin', 'KulinerController@admin');
 
 Route::delete('/admin/delete/{kuliner}', 'KulinerController@destroy');
 
-Route::get('/{keyword}', 'KulinerController@cari');
+Route::get('/cari/{keyword}','KulinerController@cari');
+
+Route::post('/pencarian', 'KulinerController@pencarian');
 
 Route::get('/admin/login', 'PageController@login');
 
@@ -42,3 +44,4 @@ Route::get('/admin/logout', 'PageController@logout');
 Route::get('/admin/edit/{kuliner}', 'KulinerController@edit');
 
 Route::patch('/admin/edit/{kuliner}', 'KulinerController@update');
+

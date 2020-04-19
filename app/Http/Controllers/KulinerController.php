@@ -141,9 +141,17 @@ class KulinerController extends Controller
         return redirect('/admin') -> with('status','Kuliner "'.$kuliner->nama.'" berhasil dihapus');
     }
 
+    public function pencarian(Request $request){
+        return redirect(url('/cari/'.$request->keyword));
+    }
+
     public function cari($keyword){
-        //Qurey DB untuk mencari sesuai keyword dan langsung di return ke view
-        return view('cari', compact('keyword'));
+        $kuliners = Kuliner::where('nama', 'LIKE', "%{$keyword}%")
+                    ->orWhere('kategori', 'LIKE', "%{$keyword}%")
+                    ->orWhere('asal', 'LIKE', "%{$keyword}%")
+                    ->orWhere('bahan_utama', 'LIKE', "%{$keyword}%")->paginate(5);
+
+        return view('cari', compact('kuliners','keyword'));
     }
 
     public function kategori(){
