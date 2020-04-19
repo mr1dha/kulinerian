@@ -84,8 +84,10 @@
     <p class="mb-0">Made with <span style="color: red">&#9829 </span>by: Aisyah, Lia, Ridha, Zikri</p>
   </div>
 <!-- END FOOTER -->
-
-	<script src="{{asset('js/jquery-3.5.0.min.js')}}"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	
+	<!-- <script src="{{asset('js/jquery-3.5.0.min.js')}}"></script> -->
 <!--     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('js/script.js')}}"></script>

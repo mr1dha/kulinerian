@@ -57,7 +57,7 @@
 
 			  <div class="form-group">
 			    <h5 >Link Embed HTML maps</h5>
-				<small  class="form-text">kunjungi tempat di google maps -> Klik bagikan -> klik sematkan HTML -> copy src link yang ada dalam tag iframe  dan paste di bawah ini</small>
+				<small  class="form-text">kunjungi tempat di google maps -> Klik bagikan -> klik sematkan HTML -> copy codenya  dan paste di bawah ini</small>
 			    <textarea rows="3" type="text" class="form-control" name="url_tempat"  required></textarea>
 			  </div>
 

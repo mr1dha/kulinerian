@@ -46,7 +46,7 @@
 				<div class="row no-gutters">
 					<div class="col-md-4">
 						<div class="embed-responsive embed-responsive-1by1">
-							<iframe src="{!!$kuliner->url_tempat!!}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							{!!$kuliner->url_tempat!!}
 						</div>			
 					</div>
 					<div class="col-md-8">
