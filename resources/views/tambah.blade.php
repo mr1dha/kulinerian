@@ -22,7 +22,7 @@
 
 		    <div class="form-group">
 			    <h5 >Kategori kuliner</h5>
-				<small  class="form-text">Pisahkan dengan titik koma (ex: Makanan utama; daging; gurih)</small>
+				<small  class="form-text">Pisahkan dengan titik koma (ex: Makanan utama; daging; gurih) <br> <span class="font-weight-bold">Daftar Kategori:</span> Makanan Berat, Makanan Ringan, Cemilan, Daging, Seafood, Sayuran, Buahan, Tepung, Gurih, Manis, Pedas, Asam, Gorengan, Berkuah, Minuman,</small>
 			    <input type="text" class="form-control" name="kategori"  required>
 			  </div>
 

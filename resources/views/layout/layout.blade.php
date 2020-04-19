@@ -34,32 +34,36 @@
 	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          KATEGORI 2
+	          BAHAN UTAMA
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <a class="dropdown-item" href="#">Something else here</a>
+	          <a class="dropdown-item" href="{{url('/kategori/daging')}}">Daging</a>
+	          <a class="dropdown-item" href="{{url('/kategori/seafood')}}">Seafood</a>
+	          <a class="dropdown-item" href="{{url('/kategori/sayur')}}">Sayuran</a>
+	          <a class="dropdown-item" href="{{url('/kategori/buah')}}">Buahan</a>
+	          <a class="dropdown-item" href="{{url('/kategori/tepung')}}">Tepung</a>
+
 	        </div>
 	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          KATEGORI 3
+	          RASA
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <a class="dropdown-item" href="#">Something else here</a>
+	          <a class="dropdown-item" href="{{url('/kategori/gurih')}}">Gurih</a>
+	          <a class="dropdown-item" href="{{url('/kategori/manis')}}">Manis</a>
+	          <a class="dropdown-item" href="{{url('/kategori/pedas')}}">Pedas</a>
+	          <a class="dropdown-item" href="{{url('/kategori/asam')}}">Asam</a>
 	        </div>
 	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          KATEGORI 4
+	          LAINNYA
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <a class="dropdown-item" href="#">Something else here</a>
+	          <a class="dropdown-item" href="{{url('/kategori/gorengan')}}">Gorengan</a>
+	          <a class="dropdown-item" href="{{url('/kategori/berkuah')}}">Berkuah</a>
+	          <a class="dropdown-item" href="{{url('/kategori/minuman')}}">Minuman</a>
 	        </div>
 	      </li>
 	    </ul>

@@ -7,7 +7,7 @@
 <div class="container" id="search-container">
 	<h1><i class="fas fa-list mr-2"></i>Kuliner di kategori "{{$keyword}}"</h1>
 	<hr class="mb-4">
-	    <div class="row"`>
+	    <div class="row">
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
 				<a href="/kuliner/{{$kuliner->id}}">
@@ -32,10 +32,13 @@
 							<a href="/kuliner/{{$kuliner->id}}"	class="w-100 btn btn-warning text-white">Lihat</a>
 			           </div>
 			          </div>
-			        </div>
-				</a>
+					</a>
+			       </div>
+		   		 @endforeach
 		    </div>
-		    @endforeach
+		<div class="row justify-content-center mt-5">
+			{{$kuliners->links()}}
+		</div>
     	</div>
 </div>
 @endsection
