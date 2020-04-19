@@ -57,6 +57,7 @@ class KulinerController extends Controller
                 'cara_masak' => $request->cara_masak,
                 'nama_tempat' => $request->nama_tempat,
                 'url_tempat' => $request->url_tempat,
+                'googlemaps' => $request->googlemaps,
                 'gambar' => $nama_file
         ]);
 
@@ -119,6 +120,7 @@ class KulinerController extends Controller
                 'cara_masak' => $request->cara_masak,
                 'nama_tempat' => $request->nama_tempat,
                 'url_tempat' => $request->url_tempat,
+                'googlemaps' => $request->googlemaps,
                 'gambar' => $nama_file
             ]);
 

@@ -61,7 +61,13 @@
 			    <textarea rows="3" type="text" class="form-control" name="url_tempat"  required></textarea>
 			  </div>
 
-			   <div class="form-group">
+			 <div class="form-group">
+			    <h5 >Link Google Maps</h5>
+			    <small  class="form-text">Contoh :  https://goo.gl/maps/fLpcVRM8tqLDYta58</small>
+			    <input type="text" class="form-control" name="googlemaps"  required>
+			  </div>
+
+			  <div class="form-group">
 			    <h5 >Gambar Kuliner</h5>
 			    <input type="file" class="form-control" name="gambar"  required>
 			  </div>

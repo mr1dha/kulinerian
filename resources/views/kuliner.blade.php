@@ -46,15 +46,15 @@
 				<div class="row no-gutters">
 					<div class="col-md-4">
 						<div class="embed-responsive embed-responsive-1by1">
-							<iframe src="{{$kuliner->url_tempat}}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							<iframe src="{!!$kuliner->url_tempat!!}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 						</div>			
 					</div>
 					<div class="col-md-8">
-						<div class="card-body">
+						<div class="card-body pb-1">
 							<h6 class="card-title font-weight-bold">{{$kuliner->nama_tempat}}</h6>
-							<p class="card-text">{{$kuliner->nama_tempat}} adalah tempat yang direkomendasikan oleh kulinerian untuk mencicipi {{$kuliner->nama}} </p>
+							<p class="card-text mb-1">{{$kuliner->nama_tempat}} adalah tempat yang direkomendasikan oleh kulinerian untuk mencicipi {{$kuliner->nama}} </p>
 							<!-- <p class="card-text">Jl. Mawar, No. 01, Darussalam, Kota Banda Aceh</p> -->
-							<a href="https://goo.gl/maps/fLpcVRM8tqLDYta58" target="#blank" class="text-white btn btn-warning">Buka Peta</a>
+							<a href="{!! $kuliner->googlemaps !!}" target="#blank" class="text-white btn btn-warning">Buka Peta</a>
 						</div>
 					</div>
 				</div>

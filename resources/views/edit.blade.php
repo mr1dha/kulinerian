@@ -61,12 +61,19 @@
 				<small  class="form-text">kunjungi tempat di google maps -> Klik bagikan -> klik sematkan HTML -> copy src link yang ada dalam tag iframe  dan paste di bawah ini</small>
 			    <textarea rows="3" type="text" class="form-control" name="url_tempat"  required>{{$kuliner->url_tempat}}</textarea>
 			  </div>
+			  
+			  <div class="form-group">
+			    <h5 >Link Google Maps</h5>
+			    <small  class="form-text">Contoh :  https://goo.gl/maps/fLpcVRM8tqLDYta58</small>
+			    <input type="text" class="form-control" name="googlemaps"  required value="{{$kuliner->googlemaps}}">
+			  </div>
 
 			  <img src="{{asset('img/'.$kuliner->gambar)}}" alt="gambar kuliner" class="image-fluid" width="200px" height="150px" style="object-fit: cover;">
 
+
 			   <div class="form-group">
 			    <h5 >Gambar Kuliner</h5>
-			    <input type="file" class="form-control" name="gambar"  >
+			    <input type="file" class="form-control" name="gambar" >
 			  </div>
 
 			  <button type="submit" class="mt-4 btn btn-primary"> <i class="fas fa-plus"></i> Simpan Edit</button>
