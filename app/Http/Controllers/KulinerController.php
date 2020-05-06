@@ -107,7 +107,7 @@ class KulinerController extends Controller
             $image_path = "img/".$kuliner->gambar;
             if(File::exists($image_path))
                 File::delete($image_path);
-        }
+            }
 
         Kuliner::where('id', $kuliner->id)
             ->update([

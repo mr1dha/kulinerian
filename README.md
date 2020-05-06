@@ -19,19 +19,18 @@ Konfigurasi dan Cara Menjalankan
 	"cp .env.example .env"
 	Lalu buka direktori project dan buka file '.env' dengan text editor favorit kamu 
 
-6) Langkah selanjutnya adalah men-generate key dengan mengetikkan perintah:
+6) Kemudian update 'DB_DATABASE'  menjadi 'kuliner5_kulinerian' (	tanpa tanda petik) pada file .env
+
+7) Langkah selanjutnya adalah men-generate key dengan mengetikkan perintah:
 	"php artisan key:generate" 
 
-7) Kemudian cari 'DB_DATABASE' dan ubah valuenya menjadi 'kulinerian' (tanpa tanda petik)
-
-8)  Langkah selanjutnya adalah mendownload file database melalui link berikut:
-	https://drive.google.com/open?id=1ou2y0fTtcSWuvj2bRKICujdsN3M7xNwM
-	Lalu ekstrak file tersebut di suatu direktori
+8)  Pastikan pada folder root terdapat file database dengan nama 'kuliner5_kulinerian.sql'
+	Database sudah termasuk data kuliner, update 6 Mei 2020 pukul 15.54.
 
 9)  Kemudian jalankan XAMPP kamu dan jalankan Apache dan MySql, lalu buka 
 localhost/phpmyadmin 
 
-10) Buat database baru dengan nama 'kulinerian'
+10) Buat database baru dengan nama 'kuliner5_kulinerian'
 
 11) Klik menu import dan upload file Database yang di download tadi lalu scroll ke paling bawah dan klik Go/Kirim
 

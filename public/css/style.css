@@ -19,7 +19,7 @@
 	}
 	.welcome input.search-bar{
 		padding-top: 7px;
-		padding-bott: ;om: 7px;
+		padding-bottom: 7px;
 		padding-left: 15px;
 		border-radius: 25px;
 		width: 350px;
@@ -42,6 +42,13 @@
 	}
 	.embed-responsive{
 		height: 200px;
+	}
+
+	form.form-inline{
+		margin-left: 0px;
+	}
+	form.form-inline input{
+		display: inline;
 	}
 }
 /*JUMBOTRON STYLE IS BELOW HERE!*/
@@ -264,4 +271,8 @@ p.card-title{
 
 .teks-kuliner	{
 	position: relative;
+}
+
+.form-inline{
+	margin-left: 20px;
 }

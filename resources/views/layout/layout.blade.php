@@ -67,7 +67,7 @@
 	        </div>
 	      </li>
 	    </ul>
-	    <form action="{{url('/pencarian')}}" method="post" class="form-inline my-2 my-lg-0 ml-3">
+	    <form action="{{url('/pencarian')}}" method="post" class="form-inline my-2 my-lg-0">
 	    	@csrf
 	      <input class="form-control mr-sm-2" type="text" placeholder="pencarian" aria-label="Search" name="keyword">
 	      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Cari</button>
