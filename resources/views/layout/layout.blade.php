@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome-free/css/all.min.css')}}">
+	@yield('style')
 	<title>@yield("title","Kulinerian")</title>
 </head>
 
@@ -81,7 +82,8 @@
 
 <!-- FOOTER -->
   <div class="footer mt-3 bg-dark">
-    <p class="mb-0">Made with <span style="color: red">&#9829 </span>by: Aisyah, Lia, Ridha, Zikri</p>
+    <p class="mb-0">Made with <span style="color: red">&#9829 </span>byProgrammer Indonesia</p>
+    <small>&copy; kulinerian 2020</small>
   </div>
 <!-- END FOOTER -->
 	

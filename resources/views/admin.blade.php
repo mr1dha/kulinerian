@@ -8,7 +8,7 @@
 	<h1 class=""><i class="fas fa-user"></i> Selamat datang Admin!</h1>
 		<!-- Menampilkan pesan status -->
 		@if(session('status'))
-			<div class="alert alert-success">
+			<div class="alert bg-gradient-success">
 				{{session('status')}} <i class="fa fa-thumbs-up"></i>
 			</div>
 		@endif

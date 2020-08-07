@@ -12,7 +12,7 @@
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top navbar-home">
 	<div class="container">
-	  <a class="navbar-brand font-weight-bold text-white mb-3" href="#"><i class="text-warning fa-2x fas fa-cloud-meatball p-0"></i>&nbsp; KULINERIAN</a>
+	  <a class="navbar-brand font-weight-bold text-white" href="#"><i class="text-warning fa-1x fas fa-cloud-meatball p-0"></i>&nbsp; KULINERIAN</a>
 	  <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -73,7 +73,7 @@
 		  <span class="web-title">KULINERIAN</span>
 		  	<form action="{{url('/pencarian')}}" method="post">
 		  		@csrf
-				<input type="text" class="search-bar" name="keyword" placeholder="Mau cari kuliner apa?">
+				<input type="text" class="search-bar" name="keyword" placeholder="contoh : 'sate', 'daging', 'kuah', 'pedas'">
 			  	<button type="submit" class="btn btn-warning btn-lg">CARI</button>
 			</form>
 	</div>
@@ -161,7 +161,8 @@
 
   <!-- FOOOTER -->
   <div class="footer mt-3 bg-dark">
-    <p class="mb-0">Made with <span style="color: red">&#9829 </span>by: Aisyah, Lia, Ridha, Zikri</p>
+    <p class="mb-0">Made with <span style="color: red">&#9829 </span>by Programmer Indonesia</p>
+    <small>&copy; kulinerian 2020</small>
   </div>
   
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
