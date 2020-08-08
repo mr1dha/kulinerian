@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Situs resep dan infomasi kuliner Indonesia">
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome-free/css/all.min.css')}}">
-	<title>Home</title>
+	<title>Beranda Kulinerian</title>
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -73,7 +74,7 @@
 		  <span class="web-title">KULINERIAN</span>
 		  	<form action="{{url('/pencarian')}}" method="post">
 		  		@csrf
-				<input type="text" class="search-bar" name="keyword" placeholder="contoh : 'sate', 'daging', 'kuah', 'pedas'">
+				<input type="text" class="search-bar" name="keyword" placeholder="contoh : 'sate', 'daging', 'kuah', 'pedas'" required>
 			  	<button type="submit" class="btn btn-warning btn-lg">CARI</button>
 			</form>
 	</div>
@@ -91,21 +92,21 @@
 	      <img src="{{asset('img/bg1.png')}}" class="d-block" alt="...">
 	      <div class="carousel-caption">
 	        <h5>Kuliner di Aceh</h5>
-	        <p>Kurang lebih terdapat XXX jenis kuliner di Aceh</p>
+	        <p>Terdapat Ratusan jenis kuliner di Aceh yang menggugah selera.</p>
 	      </div>
 	    </div>
 	    <div class="carousel-item">
 	      <img src="{{asset('img/bg2.png')}}" class="d-block" alt="...">
 	      	<div class="carousel-caption">
 	      	<h5>Sate Matang</h5>
-	        <p>Ini adalah deskripsi singkat sate matang</p>
+	        <p>Daging kambing yang dibakar dan disajikan dengan kuah soto.</p>
 	    	</div>
 	    </div>
 	    <div class="carousel-item">
 	      <img src="{{asset('img/bg3.png')}}" class="d-block" alt="...">
 	      	<div class="carousel-caption">
 	      	<h5>Soto Aceh</h5>
-	        <p>Ini adalah deskripsi singkat soto Aceh</p>
+	        <p>Soto dengan rempah khas Aceh.</p>
 	    	</div>
 	    </div>
 	  </div>

@@ -1,6 +1,6 @@
 @extends('layout/layout')
 
-@section('title','Kuliner')
+@section('title', $kuliner->nama.' - Resep dan Informasi')
 
 @section('content')
 	<div class="container" id="kuliner-container">
