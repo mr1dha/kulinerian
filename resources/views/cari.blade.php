@@ -42,7 +42,7 @@
 						<!-- @endif -->
 						@endforeach
 						<p class="card-text" id="deskripsi">{{$kuliner->deskripsi}}</p>
-						<a href="{{url('/kuliner/'.$kuliner->id)}}" class="text-white btn btn-warning">Lihat kuliner ini</a>
+						<a href="{{url('/kuliner/'.$kuliner->slug)}}" class="text-white btn btn-warning">Lihat kuliner ini</a>
 					</div>
 				</div>
 			</div>

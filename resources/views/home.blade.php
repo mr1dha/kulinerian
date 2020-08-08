@@ -128,7 +128,7 @@
     	<div class="row">
     		@foreach($kuliners as $kuliner)
     		<div class="col-md-3 col-sm-6 mb-3">
-		        <a href="/kuliner/{{$kuliner->id}}">
+		        <a href="{{url('/kuliner/'.$kuliner->slug)}}">
 		        	<div class="card border-0 shadow produk">
 		          <img src="{{asset('img/'.$kuliner->gambar)}}" alt="" class="card-img-top">
 		          <div class="card-body p-0 px-3">
@@ -147,7 +147,7 @@
 		            <p class="m-1 mb-2" id="deskripsi-kuliner">
 		             {{$kuliner->deskripsi}}
 		            </p>
-		            <a href="/kuliner/{{$kuliner->id}}"	class="w-100 btn btn-warning text-white">Lihat</a>
+		            <a href="{{ url('/kuliner/'.$kuliner->slug) }}"	class="w-100 btn btn-warning text-white">Lihat</a>
 		          </div>
 		        </div>
 		        </a>

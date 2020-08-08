@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Kuliner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class KulinerController extends Controller
 {
@@ -48,6 +49,7 @@ class KulinerController extends Controller
         $file->move($folder_tujuan, $nama_file);
 
         Kuliner::create([
+                'slug' => Str::slug($request->nama),
                  'nama' => $request->nama,
                 'deskripsi' => $request->deskripsi,
                 'kategori' => $request->kategori,
@@ -70,9 +72,10 @@ class KulinerController extends Controller
      * @param  \App\Kuliner  $kuliner
      * @return \Illuminate\Http\Response
      */
-    public function show(Kuliner $kuliner)
+    public function show($slug)
     {
         //Menampilkan data kuliner pada halaman kuliner
+        $kuliner = Kuliner::where('slug', $slug)->get()[0];
         return view('kuliner', compact('kuliner'));
     }
 
@@ -168,4 +171,5 @@ class KulinerController extends Controller
         $kuliners = Kuliner::where('kategori', 'LIKE', "%{$keyword}%")->paginate(12);
         return view('kategori', compact('kuliners','keyword'));
     }
+
 }

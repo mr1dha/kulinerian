@@ -23,7 +23,7 @@ Route::get('/admin/tambah', 'KulinerController@create');
 
 Route::post('/admin/tambah', 'KulinerController@store');
 
-Route::get('/kuliner/{kuliner}', 'KulinerController@show');
+Route::get('/kuliner/{slug}', 'KulinerController@show');
 
 Route::get('/kategori', 'KulinerController@kategori');
 
